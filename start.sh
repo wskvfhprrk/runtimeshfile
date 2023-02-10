@@ -2,10 +2,14 @@
 
 rm -rf /root/runtimeshfile
 cd /root
+rm -rf run.sh
 git clone git@github.com:wskvfhprrk/runtimeshfile.git
 
 
-cd /root/runtimeshfile/runtime_sh_file/
+cd /root/runtimeshfile/
+cp start.sh /root/run.sh
+cd runtime_sh_file
+
 mvn clean package -Dmaven.test.skip=true
 
 cd target
