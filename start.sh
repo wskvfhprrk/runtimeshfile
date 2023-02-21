@@ -8,6 +8,9 @@ git clone git@github.com:wskvfhprrk/runtimeshfile.git
 
 cd /root/runtimeshfile/
 cp start.sh /root/run.sh
+cd /root/
+chmod +x run.sh
+
 cd runtime_sh_file
 
 mvn clean package -Dmaven.test.skip=true

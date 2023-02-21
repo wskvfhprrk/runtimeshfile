@@ -38,7 +38,8 @@ public class SystemClient {
                         }
                     });
             //发起异步连接操作，同步阻等待结果
-            ChannelFuture future = bootstrap.connect("ngrok.xiaomiqiu123.top", 38299).sync();
+            ChannelFuture future = bootstrap.connect("127.0.0.1", 9090).sync();
+//            ChannelFuture future = bootstrap.connect("ngrok.xiaomiqiu123.top", 38299).sync();
             try {
                 start(future);
             } catch (IOException e) {

@@ -16,6 +16,6 @@ public class RuntimeShFileApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        SystemClient.run();
+//        SystemClient.run();
     }
 }

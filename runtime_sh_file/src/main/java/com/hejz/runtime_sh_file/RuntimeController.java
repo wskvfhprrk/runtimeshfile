@@ -35,7 +35,7 @@ public class RuntimeController {
         }
     }
 
-//    @Scheduled(cron = "* 0/1 * * * ? ")
+    @Scheduled(cron = "* 0/1 * * * ? ")
     public void runtime() throws IOException {
         String url = "http://nqql1sqmuqbt.ngrok.xiaomiqiu123.top/deployServer/heartbeat";
         try {
