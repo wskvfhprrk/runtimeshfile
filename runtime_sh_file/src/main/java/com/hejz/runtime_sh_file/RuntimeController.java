@@ -26,7 +26,7 @@ public class RuntimeController {
     @GetMapping
     public void run() throws IOException {
         log.info("项目部署………………………………………………");
-        Process process = Runtime.getRuntime().exec("sh /root/start.sh" );
+        Process process = Runtime.getRuntime().exec("sh /root/url.sh" );
         InputStreamReader ips = new InputStreamReader(process.getInputStream());
         BufferedReader br = new BufferedReader(ips);
         String line;
