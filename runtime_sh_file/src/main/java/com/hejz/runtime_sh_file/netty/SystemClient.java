@@ -9,18 +9,22 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.timeout.IdleStateHandler;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
+//@Component
 public class SystemClient {
 
     public static void main(String[] args) throws InterruptedException {
         run();
     }
+//    @PostConstruct
     public static void run() throws InterruptedException {
         //配置客户端的线程组，客户端只有一个线程组，服务端是EventLoopGroup bossGroup = new NioEventLoopGroup();
         Bootstrap bootstrap = new Bootstrap();
@@ -38,8 +42,8 @@ public class SystemClient {
                         }
                     });
             //发起异步连接操作，同步阻等待结果
-            ChannelFuture future = bootstrap.connect("127.0.0.1", 9090).sync();
-//            ChannelFuture future = bootstrap.connect("ngrok.xiaomiqiu123.top", 38299).sync();
+//            ChannelFuture future = bootstrap.connect("127.0.0.1", 9090).sync();
+            ChannelFuture future = bootstrap.connect("ngrok.xiaomiqiu123.top", 38299).sync();
             try {
                 start(future);
             } catch (IOException e) {
