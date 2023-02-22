@@ -53,7 +53,7 @@ public class RuntimeController {
 
     @Scheduled(cron = "* 0/1 * * * ? ")
     public void runtime() throws IOException {
-        String url = "http://nqql1sqmuqbt.ngrok.xiaomiqiu123.top/deployServer/heartbeat";
+        String url = "https://n3xh0tu9cxw7.guyubao.com/deployServer/heartbeat";
         try {
             ResponseEntity<Object> entity = restTemplate.getForEntity(url, null);
         } catch (Exception e) {
