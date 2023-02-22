@@ -39,10 +39,10 @@ public class RuntimeController {
             log.info("项目重新部署………………………………………………");
             process= Runtime.getRuntime().exec("sh /root/start.sh");
         }
-        if (num == 20) {
-            log.info("服务器重新部署………………………………………………");
-            process= Runtime.getRuntime().exec("shutdown -r now");
-        }
+//        if (num == 20) {
+//            log.info("服务器重新部署………………………………………………");
+//            process= Runtime.getRuntime().exec("shutdown -r now");
+//        }
         InputStreamReader ips = new InputStreamReader(process.getInputStream());
         BufferedReader br = new BufferedReader(ips);
         String line;
