@@ -31,14 +31,14 @@ public class RuntimeController {
         //3次连载不上就启动服务
         //5次连接重启服务器
         Process process = null;
-        if (num == 1) {
+//        if (num == 1) {
             log.info("小米球重新部署………………………………………………");
             process= Runtime.getRuntime().exec("sh /root/url.sh");
-        }
-        if (num == 10) {
-            log.info("项目重新部署………………………………………………");
-            process= Runtime.getRuntime().exec("sh /root/start.sh");
-        }
+//        }
+//        if (num == 10) {
+//            log.info("项目重新部署………………………………………………");
+//            process= Runtime.getRuntime().exec("sh /root/start.sh");
+//        }
 //        if (num == 20) {
 //            log.info("服务器重新部署………………………………………………");
 //            process= Runtime.getRuntime().exec("shutdown -r now");
