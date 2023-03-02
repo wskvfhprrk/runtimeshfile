@@ -55,8 +55,10 @@ public class RuntimeController {
     public void runtime() throws IOException {
         String url = "https://n3xh0tu9cxw7.guyubao.com/deployServer/heartbeat";
         try {
-            ResponseEntity<Object> entity = restTemplate.getForEntity(url, null);
+            log.info("心跳访问");
+            restTemplate.getForEntity(url, null);
         } catch (Exception e) {
+            log.error(e.getMessage());
             num++;
             run();
         }
